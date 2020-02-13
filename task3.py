@@ -7,6 +7,7 @@ def qsort(array):
 
     if len(array) > 1:
         pivot = array[0]
+
         for num in array:
             if num < pivot:
                 less.append(num)
@@ -15,7 +16,8 @@ def qsort(array):
             elif num > pivot:
                 greater.append(num)
         return qsort(less) + equal + qsort(greater)
+
     else:
         return array
 
-print(qsort([random.randrange(1, 50, 1) for i in range(20)]))
+print(qsort([random.randrange(1, 500, 1) for i in range(1000)]))
